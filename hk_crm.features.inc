@@ -16,6 +16,20 @@ function hk_crm_default_crm_core_activity_type() {
     "activity_string" : "",
     "description" : ""
   }');
+  $items['notes'] = entity_import('crm_core_activity_type', '{
+    "type" : "notes",
+    "label" : "Notes",
+    "weight" : 0,
+    "activity_string" : "",
+    "description" : ""
+  }');
+  $items['task'] = entity_import('crm_core_activity_type', '{
+    "type" : "task",
+    "label" : "Task",
+    "weight" : 0,
+    "activity_string" : "An agent created a task",
+    "description" : "Agents can create tasks to fill their personal to-do list on the agent central view."
+  }');
   return $items;
 }
 
@@ -24,6 +38,12 @@ function hk_crm_default_crm_core_activity_type() {
  */
 function hk_crm_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "ds" && $api == "ds") {
+    return array("version" => "1");
+  }
+  if ($module == "facetapi" && $api == "facetapi_defaults") {
+    return array("version" => "1");
+  }
+  if ($module == "quicktabs" && $api == "quicktabs") {
     return array("version" => "1");
   }
   if ($module == "strongarm" && $api == "strongarm") {
@@ -194,6 +214,21 @@ function hk_crm_default_search_api_live_results_search() {
       "entity_type" : "crm_core_contact"
     }
   }');
+  $items['search_api_page_2'] = entity_import('search_api_live_results_search', '{
+    "machine_name" : "search_api_page_2",
+    "name" : "Dashboard",
+    "index_id" : "crm_contacts",
+    "type" : "search_api_page",
+    "enabled" : "1",
+    "options" : {
+      "custom" : { "page_id" : "2" },
+      "result count" : true,
+      "num_results" : "5",
+      "display" : "view_mode",
+      "caching" : 0,
+      "entity_type" : "crm_core_contact"
+    }
+  }');
   return $items;
 }
 
@@ -205,7 +240,7 @@ function hk_crm_default_search_api_page() {
   $items['contact_search_box'] = entity_import('search_api_page', '{
     "index_id" : "crm_contacts",
     "path" : "search",
-    "name" : "Contact Search Box",
+    "name" : "Dashboard",
     "machine_name" : "contact_search_box",
     "description" : "",
     "options" : {
@@ -219,6 +254,67 @@ function hk_crm_default_search_api_page() {
       "empty_behavior" : ""
     },
     "enabled" : "1"
+  }');
+  return $items;
+}
+
+/**
+ * Implements hook_default_search_api_saved_searches_settings().
+ */
+function hk_crm_default_search_api_saved_searches_settings() {
+  $items = array();
+  $items['solr_node_index'] = entity_import('search_api_saved_searches_settings', '{
+    "delta" : "solr_node_index",
+    "index_id" : "solr_node_index",
+    "enabled" : "1",
+    "options" : {
+      "date_field" : "",
+      "description" : "",
+      "registered_choose_mail" : 0,
+      "choose_name" : 0,
+      "registered_user_delete_key" : 0,
+      "show_empty_list" : 1,
+      "default_true" : true,
+      "ids_list" : [],
+      "user_select_interval" : 0,
+      "interval_options" : { "86400" : "Daily", "604800" : "Weekly" },
+      "set_interval" : "86400",
+      "mail" : {
+        "activate" : {
+          "send" : 0,
+          "title" : "Activate your saved search at [site:name]",
+          "body" : "A saved search on [site:name] with this e-mail address was created.\\r\\nTo activate this saved search, click the following link:\\r\\n\\r\\n[search-api-saved-search:activate-url]\\r\\n\\r\\nIf you didn\\u0027t create this saved search, just ignore this mail and it will be deleted.\\r\\n\\r\\n--  [site:name] team"
+        },
+        "notify" : {
+          "title" : "New results for your saved search at [site:name]",
+          "body" : "[user:name],\\r\\n\\r\\nThere are new results for your saved search on [site:name]:\\r\\n\\r\\n[search-api-saved-searches:results]\\r\\n\\r\\nYou can configure your saved searches at the following address:\\r\\n[user:search-api-saved-searches-url]\\r\\n\\r\\n--  [site:name] team",
+          "results" : "New results for search \\u0022[search-api-saved-search:name]\\u0022:\\r\\n[search-api-saved-search:items]\\r\\n[search-api-saved-search:results-capped]",
+          "result" : "[search-api-saved-search-result:label] ([search-api-saved-search-result:url])",
+          "max_results" : "0",
+          "results_capped" : "\\u2026\\r\\nView all results: [search-api-saved-search:view-url]"
+        }
+      },
+      "manual" : {
+        "allow" : 1,
+        "fulltext" : 0,
+        "fields" : [
+          "field_save_workflow",
+          "field_apart_price",
+          "field_bezirk",
+          "field_kategorie",
+          "field_moving_in_from",
+          "field_apart_bathrooms",
+          "field_apart_floor",
+          "field_apart_living_space",
+          "field_apart_rooms",
+          "field_apart_sleeping_rooms",
+          "field_apart_type",
+          "field_ausstattung",
+          "field_status_quo"
+        ],
+        "page" : { "path" : "", "fulltext" : "", "direct_filter_params" : "0" }
+      }
+    }
   }');
   return $items;
 }
