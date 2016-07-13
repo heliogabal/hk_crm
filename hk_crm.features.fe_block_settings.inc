@@ -48,12 +48,6 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
         'theme' => 'hk_theme',
         'weight' => 0,
       ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
-      ),
     ),
     'title' => 'Search Criteria',
     'visibility' => 2,
@@ -87,12 +81,6 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
         'region' => '',
         'status' => 0,
         'theme' => 'hk_theme',
-        'weight' => 0,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
         'weight' => 0,
       ),
     ),
@@ -130,12 +118,6 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
         'theme' => 'hk_theme',
         'weight' => -19,
       ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => -17,
-      ),
     ),
     'title' => '<none>',
     'visibility' => 0,
@@ -169,12 +151,6 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
         'region' => '',
         'status' => 0,
         'theme' => 'hk_theme',
-        'weight' => 0,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
         'weight' => 0,
       ),
     ),
@@ -212,12 +188,6 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
         'theme' => 'hk_theme',
         'weight' => -22,
       ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => -20,
-      ),
     ),
     'title' => '<none>',
     'visibility' => 0,
@@ -253,12 +223,6 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
         'theme' => 'hk_theme',
         'weight' => -20,
       ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => -18,
-      ),
     ),
     'title' => '<none>',
     'visibility' => 0,
@@ -292,12 +256,6 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
         'region' => '',
         'status' => 0,
         'theme' => 'hk_theme',
-        'weight' => 0,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
         'weight' => 0,
       ),
     ),
@@ -335,12 +293,6 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
         'theme' => 'hk_theme',
         'weight' => 0,
       ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
-      ),
     ),
     'title' => '<none>',
     'visibility' => 0,
@@ -376,12 +328,6 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
         'theme' => 'hk_theme',
         'weight' => -23,
       ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => -21,
-      ),
     ),
     'title' => '<none>',
     'visibility' => 0,
@@ -415,12 +361,6 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
         'region' => '',
         'status' => 0,
         'theme' => 'hk_theme',
-        'weight' => 0,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
         'weight' => 0,
       ),
     ),
@@ -458,12 +398,6 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
         'theme' => 'hk_theme',
         'weight' => 0,
       ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
-      ),
     ),
     'title' => '<none>',
     'visibility' => 0,
@@ -497,12 +431,6 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
         'region' => '',
         'status' => 0,
         'theme' => 'hk_theme',
-        'weight' => 0,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
         'weight' => 0,
       ),
     ),
@@ -540,12 +468,6 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
         'theme' => 'hk_theme',
         'weight' => -21,
       ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => -19,
-      ),
     ),
     'title' => '<none>',
     'visibility' => 0,
@@ -561,7 +483,7 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
     'module' => 'hk_custom_crm',
     'node_types' => array(),
     'pages' => '<?php
-if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empty(arg(3)) || arg(0) == \'search\') {
+if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empty(arg(3)) || arg(0) == \'search\' || arg(1) == \'agent-central\') {
   return true;
 } else {
   return false;
@@ -579,18 +501,52 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
         'region' => 'content_before',
         'status' => 1,
         'theme' => 'hk_adminimal',
-        'weight' => -35,
+        'weight' => -40,
       ),
       'hk_theme' => array(
         'region' => 'content',
         'status' => 1,
         'theme' => 'hk_theme',
-        'weight' => -34,
+        'weight' => -45,
       ),
-      'seven' => array(
+    ),
+    'title' => '',
+    'visibility' => 2,
+  );
+
+  $export['hk_custom_crm-custom_saved_search'] = array(
+    'cache' => 1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'custom_saved_search',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'hk_custom_crm',
+    'node_types' => array(),
+    'pages' => '<?php
+if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empty(arg(3))) {
+  return true;
+} else {
+  return false;
+}',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
         'region' => '',
         'status' => 0,
-        'theme' => 'seven',
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'hk_adminimal' => array(
+        'region' => 'sidebar_right',
+        'status' => 1,
+        'theme' => 'hk_adminimal',
+        'weight' => 0,
+      ),
+      'hk_theme' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'hk_theme',
         'weight' => 0,
       ),
     ),
@@ -599,7 +555,7 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
   );
 
   $export['locale-language'] = array(
-    'cache' => 2,
+    'cache' => -1,
     'css_class' => 'language-switcher',
     'custom' => 0,
     'delta' => 'language',
@@ -628,12 +584,6 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
         'theme' => 'hk_theme',
         'weight' => -34,
       ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => -22,
-      ),
     ),
     'title' => '<none>',
     'visibility' => 0,
@@ -649,7 +599,7 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
     'module' => 'menu',
     'node_types' => array(),
     'pages' => '<?php
-if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empty(arg(3)) || arg(0) == \'search\') {
+if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empty(arg(3)) || arg(0) == \'search\' || arg(1) == \'agent-central\') {
   return true;
 } else {
   return false;
@@ -674,12 +624,6 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
         'status' => 1,
         'theme' => 'hk_theme',
         'weight' => -32,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
       ),
     ),
     'title' => '<none>',
@@ -716,15 +660,44 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
         'theme' => 'hk_theme',
         'weight' => -35,
       ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => -25,
-      ),
     ),
     'title' => '',
     'visibility' => 0,
+  );
+
+  $export['quicktabs-agent_calendar'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'agent_calendar',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'quicktabs',
+    'node_types' => array(),
+    'pages' => 'crm-core/agent-central/*',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'hk_adminimal' => array(
+        'region' => 'content_before',
+        'status' => 1,
+        'theme' => 'hk_adminimal',
+        'weight' => 0,
+      ),
+      'hk_theme' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'hk_theme',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 1,
   );
 
   $export['quicktabs-crm_contact_page'] = array(
@@ -761,13 +734,7 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
         'region' => 'content',
         'status' => 1,
         'theme' => 'hk_theme',
-        'weight' => -30,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
+        'weight' => -40,
       ),
     ),
     'title' => '<none>',
@@ -775,7 +742,7 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
   );
 
   $export['search_api_page-contact_search_box'] = array(
-    'cache' => -1,
+    'cache' => 5,
     'css_class' => 'search-block',
     'custom' => 0,
     'delta' => 'contact_search_box',
@@ -784,7 +751,7 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
     'module' => 'search_api_page',
     'node_types' => array(),
     'pages' => '<?php
-if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empty(arg(3))) {
+if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empty(arg(3)) || arg(1) == \'agent-central\') {
   return true;
 } else {
   return false;
@@ -809,12 +776,6 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
         'status' => 1,
         'theme' => 'hk_theme',
         'weight' => -33,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
       ),
     ),
     'title' => '<none>',
@@ -856,12 +817,6 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
         'theme' => 'hk_theme',
         'weight' => 0,
       ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
-      ),
     ),
     'title' => '<none>',
     'visibility' => 2,
@@ -897,12 +852,6 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
         'theme' => 'hk_theme',
         'weight' => -37,
       ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => -26,
-      ),
     ),
     'title' => '<none>',
     'visibility' => 0,
@@ -936,16 +885,80 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
         'region' => 'content',
         'status' => 1,
         'theme' => 'hk_theme',
-        'weight' => -27,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
+        'weight' => -39,
       ),
     ),
     'title' => '',
+    'visibility' => 1,
+  );
+
+  $export['views-ab8e5f645812c25bdab53ec78e960cb5'] = array(
+    'cache' => -1,
+    'css_class' => 'to-do-task',
+    'custom' => 0,
+    'delta' => 'ab8e5f645812c25bdab53ec78e960cb5',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => 'crm-core/agent-central/*',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'hk_adminimal' => array(
+        'region' => 'content_before',
+        'status' => 1,
+        'theme' => 'hk_adminimal',
+        'weight' => -39,
+      ),
+      'hk_theme' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'hk_theme',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'To-do Task',
+    'visibility' => 1,
+  );
+
+  $export['views-calendar-block_2'] = array(
+    'cache' => -1,
+    'css_class' => 'agent-calendar',
+    'custom' => 0,
+    'delta' => 'calendar-block_2',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => 'crm-core/agent-central/*',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'hk_adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'hk_adminimal',
+        'weight' => -38,
+      ),
+      'hk_theme' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'hk_theme',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '<none>',
     'visibility' => 1,
   );
 
@@ -959,7 +972,7 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
     'module' => 'views',
     'node_types' => array(),
     'pages' => '<?php
-if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empty(arg(3)) || arg(0) == \'search\') {
+if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empty(arg(3)) || arg(0) == \'search\' || arg(1) == \'agent-central\') {
   return true;
 } else {
   return false;
@@ -977,19 +990,13 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
         'region' => 'content_before',
         'status' => 1,
         'theme' => 'hk_adminimal',
-        'weight' => -36,
+        'weight' => -41,
       ),
       'hk_theme' => array(
         'region' => 'content',
         'status' => 1,
         'theme' => 'hk_theme',
-        'weight' => -35,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
+        'weight' => -46,
       ),
     ),
     'title' => '<none>',
@@ -1020,8 +1027,8 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
         'weight' => 0,
       ),
       'hk_adminimal' => array(
-        'region' => 'sidebar_right',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'hk_adminimal',
         'weight' => 0,
       ),
@@ -1029,12 +1036,6 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
         'region' => '',
         'status' => 0,
         'theme' => 'hk_theme',
-        'weight' => 0,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
         'weight' => 0,
       ),
     ),
@@ -1076,12 +1077,6 @@ if(arg(0) == \'crm-core\' && arg(1) == \'contact\' && is_numeric(arg(2)) && empt
         'region' => 'sidebar_second',
         'status' => 1,
         'theme' => 'hk_theme',
-        'weight' => 0,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
         'weight' => 0,
       ),
     ),

@@ -10,9 +10,9 @@
 function hk_crm_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'crm_core_activity-email-field_activity_date'.
-  $field_instances['crm_core_activity-email-field_activity_date'] = array(
-    'bundle' => 'email',
+  // Exported field_instance: 'crm_core_activity-anfrage-field_activity_date'.
+  $field_instances['crm_core_activity-anfrage-field_activity_date'] = array(
+    'bundle' => 'anfrage',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -26,7 +26,6 @@ function hk_crm_field_default_field_instances() {
           'multiple_number' => '',
           'multiple_to' => '',
           'show_remaining_days' => FALSE,
-          'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
         'weight' => 1,
@@ -59,6 +58,265 @@ function hk_crm_field_default_field_instances() {
         'input_format_custom' => '',
         'label_position' => 'above',
         'repeat_collapsed' => 0,
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_popup',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'crm_core_activity-anfrage-field_activity_notes'.
+  $field_instances['crm_core_activity-anfrage-field_activity_notes'] = array(
+    'bundle' => 'anfrage',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'crm_core_activity',
+    'field_name' => 'field_activity_notes',
+    'label' => 'Notes',
+    'required' => FALSE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'crm_core_activity-anfrage-field_activity_participants'.
+  $field_instances['crm_core_activity-anfrage-field_activity_participants'] = array(
+    'bundle' => 'anfrage',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 0,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'crm_core_activity',
+    'field_name' => 'field_activity_participants',
+    'label' => 'Participants',
+    'required' => TRUE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'crm_core_activity-anfrage-field_activity_status'.
+  $field_instances['crm_core_activity-anfrage-field_activity_status'] = array(
+    'bundle' => 'anfrage',
+    'default_value' => array(
+      0 => array(
+        'value' => 'Frisch Eingetroffen',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 3,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'crm_core_activity',
+    'field_name' => 'field_activity_status',
+    'label' => 'Status',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'select2_integration' => array(
+        'styling' => array(
+          'dropdownAutoWidth' => 0,
+          'placeholder' => '',
+        ),
+        'use_select2' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'use_select2' => FALSE,
+      ),
+      'type' => 'options_select',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'crm_core_activity-anfrage-field_angefragte_wohnung'.
+  $field_instances['crm_core_activity-anfrage-field_angefragte_wohnung'] = array(
+    'bundle' => 'anfrage',
+    'default_value' => NULL,
+    'default_value_function' => 'entityreference_prepopulate_field_default_value',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 0,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 5,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'crm_core_activity',
+    'field_name' => 'field_angefragte_wohnung',
+    'label' => 'Inquiry for',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'action' => 'disable',
+          'action_on_edit' => 1,
+          'fallback' => 'none',
+          'providers' => array(
+            'og_context' => FALSE,
+            'url' => 1,
+          ),
+          'skip_perm' => 0,
+          'status' => 1,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'references_dialog_add' => 0,
+        'references_dialog_edit' => 0,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'crm_core_activity-email-field_activity_date'.
+  $field_instances['crm_core_activity-email-field_activity_date'] = array(
+    'bundle' => 'email',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'german_date',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => 0,
+        ),
+        'type' => 'date_default',
+        'weight' => 1,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'crm_core_activity',
+    'field_name' => 'field_activity_date',
+    'label' => 'Date',
+    'required' => 0,
+    'settings' => array(
+      'default_value' => 'now',
+      'default_value2' => 'blank',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'd.m.Y',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'no_fieldset' => 0,
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
@@ -112,7 +370,7 @@ function hk_crm_field_default_field_instances() {
   // 'crm_core_activity-email-field_activity_participants'.
   $field_instances['crm_core_activity-email-field_activity_participants'] = array(
     'bundle' => 'email',
-    'default_value' => NULL,
+    'default_value' => array(),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -146,6 +404,10 @@ function hk_crm_field_default_field_instances() {
       'settings' => array(
         'match_operator' => 'CONTAINS',
         'path' => '',
+        'references_dialog_add' => 0,
+        'references_dialog_edit' => 0,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete_tags',
@@ -321,6 +583,69 @@ function hk_crm_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'crm_core_activity-email-field_participants'.
+  $field_instances['crm_core_activity-email-field_participants'] = array(
+    'bundle' => 'email',
+    'default_value' => NULL,
+    'default_value_function' => 'entityreference_prepopulate_field_default_value',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 7,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'crm_core_activity',
+    'field_name' => 'field_participants',
+    'label' => 'Participants',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'action' => 'none',
+          'action_on_edit' => 1,
+          'fallback' => 'none',
+          'providers' => array(
+            'og_context' => FALSE,
+            'url' => 1,
+          ),
+          'skip_perm' => 0,
+          'status' => 1,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'references_dialog_add' => 0,
+        'references_dialog_edit' => 0,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 10,
+    ),
+  );
+
   // Exported field_instance: 'crm_core_activity-email-field_recipient'.
   $field_instances['crm_core_activity-email-field_recipient'] = array(
     'bundle' => 'email',
@@ -384,6 +709,347 @@ function hk_crm_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance:
+  // 'crm_core_activity-kontaktformular-field_activity_date'.
+  $field_instances['crm_core_activity-kontaktformular-field_activity_date'] = array(
+    'bundle' => 'kontaktformular',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => FALSE,
+          'show_repeat_rule' => 'show',
+        ),
+        'type' => 'date_default',
+        'weight' => 1,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'crm_core_activity',
+    'field_name' => 'field_activity_date',
+    'label' => 'Date',
+    'required' => FALSE,
+    'settings' => array(
+      'default_value' => 'now',
+      'default_value2' => 'blank',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'm/d/Y - H:i:s',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'repeat_collapsed' => 0,
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_popup',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'crm_core_activity-kontaktformular-field_activity_notes'.
+  $field_instances['crm_core_activity-kontaktformular-field_activity_notes'] = array(
+    'bundle' => 'kontaktformular',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'crm_core_activity',
+    'field_name' => 'field_activity_notes',
+    'label' => 'Notes',
+    'required' => FALSE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'tmgmt_translate' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'crm_core_activity-kontaktformular-field_activity_participants'.
+  $field_instances['crm_core_activity-kontaktformular-field_activity_participants'] = array(
+    'bundle' => 'kontaktformular',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'colorbox_node_classes' => '',
+          'colorbox_node_height' => 600,
+          'colorbox_node_link' => FALSE,
+          'colorbox_node_width' => 600,
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 0,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'crm_core_activity',
+    'field_name' => 'field_activity_participants',
+    'label' => 'Participants',
+    'required' => TRUE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
+      'weight' => 31,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'crm_core_activity-kontaktformular-field_activity_status'.
+  $field_instances['crm_core_activity-kontaktformular-field_activity_status'] = array(
+    'bundle' => 'kontaktformular',
+    'default_value' => array(
+      0 => array(
+        'value' => 'Frisch Eingetroffen',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 4,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'crm_core_activity',
+    'field_name' => 'field_activity_status',
+    'label' => 'Status',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 35,
+    ),
+  );
+
+  // Exported field_instance: 'crm_core_activity-meeting-field_activity_date'.
+  $field_instances['crm_core_activity-meeting-field_activity_date'] = array(
+    'bundle' => 'meeting',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => FALSE,
+          'show_repeat_rule' => 'show',
+        ),
+        'type' => 'date_default',
+        'weight' => 1,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'crm_core_activity',
+    'field_name' => 'field_activity_date',
+    'label' => 'Date',
+    'required' => FALSE,
+    'settings' => array(
+      'default_value' => 'now',
+      'default_value2' => 'blank',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'm/d/Y - H:i:s',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'repeat_collapsed' => 0,
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_popup',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'crm_core_activity-meeting-field_activity_notes'.
+  $field_instances['crm_core_activity-meeting-field_activity_notes'] = array(
+    'bundle' => 'meeting',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'crm_core_activity',
+    'field_name' => 'field_activity_notes',
+    'label' => 'Notes',
+    'required' => FALSE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'crm_core_activity-meeting-field_activity_participants'.
+  $field_instances['crm_core_activity-meeting-field_activity_participants'] = array(
+    'bundle' => 'meeting',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'colorbox_node_classes' => '',
+          'colorbox_node_height' => 600,
+          'colorbox_node_link' => FALSE,
+          'colorbox_node_width' => 600,
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 0,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'crm_core_activity',
+    'field_name' => 'field_activity_participants',
+    'label' => 'Participants',
+    'required' => TRUE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
+      'weight' => -4,
+    ),
+  );
+
   // Exported field_instance: 'crm_core_activity-meeting-field_meeting_type'.
   $field_instances['crm_core_activity-meeting-field_meeting_type'] = array(
     'bundle' => 'meeting',
@@ -433,13 +1099,12 @@ function hk_crm_field_default_field_instances() {
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'long',
+          'format_type' => 'german_date',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
-          'show_remaining_days' => FALSE,
-          'show_repeat_rule' => 'show',
+          'show_remaining_days' => 0,
         ),
         'type' => 'date_default',
         'weight' => 1,
@@ -451,10 +1116,11 @@ function hk_crm_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'crm_core_activity',
     'field_name' => 'field_activity_date',
     'label' => 'Date',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
       'default_value' => 'now',
       'default_value2' => 'blank',
@@ -468,10 +1134,10 @@ function hk_crm_field_default_field_instances() {
       'module' => 'date',
       'settings' => array(
         'increment' => 15,
-        'input_format' => 'm/d/Y - H:i:s',
+        'input_format' => 'd.m.Y',
         'input_format_custom' => '',
         'label_position' => 'above',
-        'repeat_collapsed' => 0,
+        'no_fieldset' => 0,
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
@@ -629,9 +1295,73 @@ function hk_crm_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'crm_core_activity-task-field_activity_date'.
-  $field_instances['crm_core_activity-task-field_activity_date'] = array(
-    'bundle' => 'task',
+  // Exported field_instance: 'crm_core_activity-notes-field_participants'.
+  $field_instances['crm_core_activity-notes-field_participants'] = array(
+    'bundle' => 'notes',
+    'default_value' => NULL,
+    'default_value_function' => 'entityreference_prepopulate_field_default_value',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 4,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'crm_core_activity',
+    'field_name' => 'field_participants',
+    'label' => 'Participants',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'action' => 'none',
+          'action_on_edit' => 1,
+          'fallback' => 'none',
+          'providers' => array(
+            'og_context' => FALSE,
+            'url' => 1,
+          ),
+          'skip_perm' => 0,
+          'status' => 1,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'references_dialog_add' => 0,
+        'references_dialog_edit' => 0,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 35,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'crm_core_activity-phone_call-field_activity_date'.
+  $field_instances['crm_core_activity-phone_call-field_activity_date'] = array(
+    'bundle' => 'phone_call',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -659,7 +1389,7 @@ function hk_crm_field_default_field_instances() {
     ),
     'entity_type' => 'crm_core_activity',
     'field_name' => 'field_activity_date',
-    'label' => 'Datum',
+    'label' => 'Date',
     'required' => FALSE,
     'settings' => array(
       'default_value' => 'now',
@@ -680,6 +1410,154 @@ function hk_crm_field_default_field_instances() {
         'repeat_collapsed' => 0,
         'text_parts' => array(),
         'year_range' => '-3:+3',
+      ),
+      'type' => 'date_popup',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'crm_core_activity-phone_call-field_activity_notes'.
+  $field_instances['crm_core_activity-phone_call-field_activity_notes'] = array(
+    'bundle' => 'phone_call',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'crm_core_activity',
+    'field_name' => 'field_activity_notes',
+    'label' => 'Notes',
+    'required' => FALSE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'crm_core_activity-phone_call-field_activity_participants'.
+  $field_instances['crm_core_activity-phone_call-field_activity_participants'] = array(
+    'bundle' => 'phone_call',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'colorbox_node_classes' => '',
+          'colorbox_node_height' => 600,
+          'colorbox_node_link' => FALSE,
+          'colorbox_node_width' => 600,
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 0,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'crm_core_activity',
+    'field_name' => 'field_activity_participants',
+    'label' => 'Participants',
+    'required' => TRUE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
+      'weight' => -4,
+    ),
+  );
+
+  // Exported field_instance: 'crm_core_activity-task-field_activity_date'.
+  $field_instances['crm_core_activity-task-field_activity_date'] = array(
+    'bundle' => 'task',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'german_date',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => 0,
+        ),
+        'type' => 'date_default',
+        'weight' => 1,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'crm_core_activity',
+    'field_name' => 'field_activity_date',
+    'label' => 'Datum',
+    'required' => 0,
+    'settings' => array(
+      'default_value' => 'now',
+      'default_value2' => 'blank',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'd.m.Y',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'no_fieldset' => 0,
+        'text_parts' => array(),
+        'year_range' => '-0:+3',
       ),
       'type' => 'date_popup',
       'weight' => 1,
@@ -811,6 +1689,69 @@ function hk_crm_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'crm_core_activity-task-field_participants'.
+  $field_instances['crm_core_activity-task-field_participants'] = array(
+    'bundle' => 'task',
+    'default_value' => NULL,
+    'default_value_function' => 'entityreference_prepopulate_field_default_value',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 5,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'crm_core_activity',
+    'field_name' => 'field_participants',
+    'label' => 'Participants',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'action' => 'none',
+          'action_on_edit' => 0,
+          'fallback' => 'none',
+          'providers' => array(
+            'og_context' => FALSE,
+            'url' => 1,
+          ),
+          'skip_perm' => 0,
+          'status' => 1,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'references_dialog_add' => 0,
+        'references_dialog_edit' => 0,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 35,
+    ),
+  );
+
   // Exported field_instance: 'crm_core_activity-task-field_task_type'.
   $field_instances['crm_core_activity-task-field_task_type'] = array(
     'bundle' => 'task',
@@ -857,6 +1798,215 @@ function hk_crm_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'crm_core_contact-household-contact_name'.
+  $field_instances['crm_core_contact-household-contact_name'] = array(
+    'bundle' => 'household',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'name',
+        'settings' => array(
+          'format' => 'default',
+          'markup' => 0,
+          'multiple' => 'default',
+          'multiple_and' => 'text',
+          'multiple_delimiter' => ', ',
+          'multiple_delimiter_precedes_last' => 'never',
+          'multiple_el_al_first' => 1,
+          'multiple_el_al_min' => 3,
+          'output' => 'default',
+        ),
+        'type' => 'name_formatter',
+        'weight' => 0,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'crm_core_contact',
+    'field_name' => 'contact_name',
+    'label' => 'Household',
+    'required' => 0,
+    'settings' => array(
+      'component_css' => '',
+      'component_layout' => 'default',
+      'components' => array(
+        'credentials' => 0,
+        'family' => 'family',
+        'generational' => 0,
+        'given' => 0,
+        'middle' => 0,
+        'title' => 0,
+      ),
+      'credentials_inline' => 0,
+      'entity_translation_sync' => FALSE,
+      'field_type' => array(
+        'credentials' => 'text',
+        'family' => 'text',
+        'generational' => 'select',
+        'given' => 'text',
+        'middle' => 'text',
+        'title' => 'select',
+      ),
+      'generational_field' => 'select',
+      'inline_css' => array(
+        'credentials' => '',
+        'family' => '',
+        'generational' => '',
+        'given' => '',
+        'middle' => '',
+        'title' => '',
+      ),
+      'labels' => array(
+        'credentials' => '',
+        'family' => 'Household name',
+        'generational' => '',
+        'given' => '',
+        'middle' => '',
+        'title' => '',
+      ),
+      'minimum_components' => array(
+        'credentials' => 0,
+        'family' => 'family',
+        'generational' => 0,
+        'given' => 0,
+        'middle' => 0,
+        'title' => 0,
+      ),
+      'override_format' => 'default',
+      'show_component_required_marker' => 0,
+      'size' => array(
+        'credentials' => 35,
+        'family' => 20,
+        'generational' => 5,
+        'given' => 20,
+        'middle' => 20,
+        'title' => 6,
+      ),
+      'title_display' => array(
+        'credentials' => 'none',
+        'family' => 'description',
+        'generational' => 'none',
+        'given' => 'none',
+        'middle' => 'none',
+        'title' => 'none',
+      ),
+      'title_field' => 'select',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'name',
+      'settings' => array(),
+      'type' => 'name_widget',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'crm_core_contact-individual-contact_name'.
+  $field_instances['crm_core_contact-individual-contact_name'] = array(
+    'bundle' => 'individual',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'name',
+        'settings' => array(
+          'format' => 'default',
+          'markup' => 0,
+          'multiple' => 'default',
+          'multiple_and' => 'text',
+          'multiple_delimiter' => ', ',
+          'multiple_delimiter_precedes_last' => 'never',
+          'multiple_el_al_first' => 1,
+          'multiple_el_al_min' => 3,
+          'output' => 'default',
+        ),
+        'type' => 'name_formatter',
+        'weight' => 0,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'crm_core_contact',
+    'field_name' => 'contact_name',
+    'label' => 'Name',
+    'required' => 1,
+    'settings' => array(
+      'component_css' => '',
+      'component_layout' => 'default',
+      'components' => array(),
+      'credentials_inline' => 1,
+      'entity_translation_sync' => FALSE,
+      'field_type' => array(
+        'credentials' => 'text',
+        'family' => 'text',
+        'generational' => 'select',
+        'given' => 'text',
+        'middle' => 'text',
+        'title' => 'select',
+      ),
+      'generational_field' => 'select',
+      'inline_css' => array(
+        'credentials' => '',
+        'family' => '',
+        'generational' => '',
+        'given' => '',
+        'middle' => '',
+        'title' => '',
+      ),
+      'labels' => array(
+        'credentials' => '',
+        'family' => '',
+        'generational' => '',
+        'given' => '',
+        'middle' => '',
+        'title' => '',
+      ),
+      'minimum_components' => array(),
+      'override_format' => 'default',
+      'show_component_required_marker' => 0,
+      'size' => array(
+        'credentials' => 6,
+        'family' => 20,
+        'generational' => 5,
+        'given' => 20,
+        'middle' => 20,
+        'title' => 6,
+      ),
+      'title_display' => array(
+        'credentials' => 'description',
+        'family' => 'description',
+        'generational' => 'description',
+        'given' => 'description',
+        'middle' => 'description',
+        'title' => 'description',
+      ),
+      'title_field' => 'select',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'name',
+      'settings' => array(),
+      'type' => 'name_widget',
+      'weight' => 0,
+    ),
+  );
+
   // Exported field_instance: 'crm_core_contact-individual-field_birthday'.
   $field_instances['crm_core_contact-individual-field_birthday'] = array(
     'bundle' => 'individual',
@@ -865,16 +2015,8 @@ function hk_crm_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-          'show_remaining_days' => FALSE,
-        ),
-        'type' => 'date_default',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 10,
       ),
       'live_results_search' => array(
@@ -902,8 +2044,8 @@ function hk_crm_field_default_field_instances() {
       'module' => 'date',
       'settings' => array(
         'increment' => 15,
-        'input_format' => 'd/m/Y - g:i:sa',
-        'input_format_custom' => '',
+        'input_format' => 'custom',
+        'input_format_custom' => 'm.d.Y H\\hi',
         'label_position' => 'above',
         'no_fieldset' => 0,
         'text_parts' => array(),
@@ -923,9 +2065,8 @@ function hk_crm_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 8,
       ),
       'live_results_search' => array(
@@ -956,7 +2097,268 @@ function hk_crm_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 9,
+      'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance: 'crm_core_contact-individual-field_crm_address'.
+  $field_instances['crm_core_contact-individual-field_crm_address'] = array(
+    'bundle' => 'individual',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'addressfield',
+        'settings' => array(
+          'format_handlers' => array(
+            'address' => 'address',
+            'address-hide-country' => 'address-hide-country',
+          ),
+          'use_widget_handlers' => 1,
+        ),
+        'type' => 'addressfield_default',
+        'weight' => 3,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'crm_core_contact',
+    'field_name' => 'field_crm_address',
+    'label' => 'Address',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'addressfield',
+      'settings' => array(
+        'available_countries' => array(),
+        'default_country' => 'site_default',
+        'format_handlers' => array(
+          'address' => 'address',
+          'address-hide-country' => 'address-hide-country',
+          'address-optional' => 'address-optional',
+          'address-hide-postal-code' => 0,
+          'address-hide-street' => 0,
+          'organisation' => 0,
+          'name-oneline' => 0,
+          'name-full' => 0,
+        ),
+      ),
+      'type' => 'addressfield_standard',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'crm_core_contact-individual-field_crm_bemerkungen'.
+  $field_instances['crm_core_contact-individual-field_crm_bemerkungen'] = array(
+    'bundle' => 'individual',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'crm_core_contact',
+    'field_name' => 'field_crm_bemerkungen',
+    'label' => 'Bemerkungen',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'crm_core_contact-individual-field_e_mail'.
+  $field_instances['crm_core_contact-individual-field_e_mail'] = array(
+    'bundle' => 'individual',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'email',
+        'settings' => array(),
+        'type' => 'email_default',
+        'weight' => 1,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'module' => 'email',
+        'settings' => array(),
+        'type' => 'email_plain',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'crm_core_contact',
+    'field_name' => 'field_e_mail',
+    'label' => 'E-Mail',
+    'required' => 1,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'email',
+      'settings' => array(
+        'size' => 36,
+      ),
+      'type' => 'email_textfield',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'crm_core_contact-individual-field_individual_company'.
+  $field_instances['crm_core_contact-individual-field_individual_company'] = array(
+    'bundle' => 'individual',
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'crm_core_contact',
+    'field_name' => 'field_individual_company',
+    'label' => 'Company',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'references_dialog_add' => 1,
+        'references_dialog_edit' => 1,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 13,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'crm_core_contact-individual-field_individual_connection'.
+  $field_instances['crm_core_contact-individual-field_individual_connection'] = array(
+    'bundle' => 'individual',
+    'default_value' => NULL,
+    'default_value_function' => 'entityreference_prepopulate_field_default_value',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'crm_core_contact',
+    'field_name' => 'field_individual_connection',
+    'label' => 'Connection',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'action' => 'disable',
+          'action_on_edit' => 1,
+          'fallback' => 'none',
+          'providers' => array(
+            'og_context' => FALSE,
+            'url' => 1,
+          ),
+          'skip_perm' => 0,
+          'status' => 1,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'references_dialog_add' => 1,
+        'references_dialog_edit' => 1,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 14,
     ),
   );
 
@@ -964,19 +2366,14 @@ function hk_crm_field_default_field_instances() {
   // 'crm_core_contact-individual-field_individual_type'.
   $field_instances['crm_core_contact-individual-field_individual_type'] = array(
     'bundle' => 'individual',
-    'default_value' => array(
-      0 => array(
-        'tid' => 356,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'hidden',
         'weight' => 6,
       ),
       'live_results_search' => array(
@@ -1000,7 +2397,7 @@ function hk_crm_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 7,
+      'weight' => 1,
     ),
   );
 
@@ -1013,9 +2410,8 @@ function hk_crm_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 9,
       ),
       'live_results_search' => array(
@@ -1046,7 +2442,7 @@ function hk_crm_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 10,
+      'weight' => 9,
     ),
   );
 
@@ -1059,9 +2455,8 @@ function hk_crm_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 11,
       ),
       'live_results_search' => array(
@@ -1105,9 +2500,8 @@ function hk_crm_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 12,
       ),
       'live_results_search' => array(
@@ -1138,7 +2532,52 @@ function hk_crm_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 13,
+      'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance: 'crm_core_contact-individual-field_phone'.
+  $field_instances['crm_core_contact-individual-field_phone'] = array(
+    'bundle' => 'individual',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'phone',
+        'settings' => array(),
+        'type' => 'phone',
+        'weight' => 2,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'module' => 'phone',
+        'settings' => array(),
+        'type' => 'phone',
+        'weight' => 1,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'crm_core_contact',
+    'field_name' => 'field_phone',
+    'label' => 'Phone',
+    'required' => 1,
+    'settings' => array(
+      'ca_phone_parentheses' => 1,
+      'ca_phone_separator' => '-',
+      'entity_translation_sync' => FALSE,
+      'phone_country_code' => 0,
+      'phone_default_country_code' => 49,
+      'phone_int_max_length' => 15,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'phone',
+      'settings' => array(),
+      'type' => 'phone_textfield',
+      'weight' => 2,
     ),
   );
 
@@ -1151,12 +2590,8 @@ function hk_crm_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 7,
       ),
       'live_results_search' => array(
@@ -1225,28 +2660,249 @@ function hk_crm_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 8,
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'crm_core_contact-individual-field_responsible_agent'.
+  $field_instances['crm_core_contact-individual-field_responsible_agent'] = array(
+    'bundle' => 'individual',
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'crm_core_contact',
+    'field_name' => 'field_responsible_agent',
+    'label' => 'Responsible agent',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'crm_core_contact-individual-field_secondary_agent'.
+  $field_instances['crm_core_contact-individual-field_secondary_agent'] = array(
+    'bundle' => 'individual',
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'crm_core_contact',
+    'field_name' => 'field_secondary_agent',
+    'label' => 'Secondary agent',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'references_dialog_add' => 0,
+        'references_dialog_edit' => 0,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'crm_core_contact-organization-contact_name'.
+  $field_instances['crm_core_contact-organization-contact_name'] = array(
+    'bundle' => 'organization',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'name',
+        'settings' => array(
+          'format' => 'default',
+          'markup' => 0,
+          'multiple' => 'default',
+          'multiple_and' => 'text',
+          'multiple_delimiter' => ', ',
+          'multiple_delimiter_precedes_last' => 'never',
+          'multiple_el_al_first' => 1,
+          'multiple_el_al_min' => 3,
+          'output' => 'default',
+        ),
+        'type' => 'name_formatter',
+        'weight' => 0,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'crm_core_contact',
+    'field_name' => 'contact_name',
+    'label' => 'Organization',
+    'required' => 0,
+    'settings' => array(
+      'component_css' => '',
+      'component_layout' => 'default',
+      'components' => array(
+        'credentials' => 0,
+        'family' => 'family',
+        'generational' => 0,
+        'given' => 0,
+        'middle' => 0,
+        'title' => 0,
+      ),
+      'credentials_inline' => 0,
+      'entity_translation_sync' => FALSE,
+      'field_type' => array(
+        'credentials' => 'text',
+        'family' => 'text',
+        'generational' => 'select',
+        'given' => 'text',
+        'middle' => 'text',
+        'title' => 'select',
+      ),
+      'generational_field' => 'select',
+      'inline_css' => array(
+        'credentials' => '',
+        'family' => '',
+        'generational' => '',
+        'given' => '',
+        'middle' => '',
+        'title' => '',
+      ),
+      'labels' => array(
+        'credentials' => '',
+        'family' => 'Organization name',
+        'generational' => '',
+        'given' => '',
+        'middle' => '',
+        'title' => '',
+      ),
+      'minimum_components' => array(
+        'credentials' => 0,
+        'family' => 'family',
+        'generational' => 0,
+        'given' => 0,
+        'middle' => 0,
+        'title' => 0,
+      ),
+      'override_format' => 'default',
+      'show_component_required_marker' => 0,
+      'size' => array(
+        'credentials' => 35,
+        'family' => 20,
+        'generational' => 5,
+        'given' => 20,
+        'middle' => 20,
+        'title' => 6,
+      ),
+      'title_display' => array(
+        'credentials' => 'none',
+        'family' => 'description',
+        'generational' => 'none',
+        'given' => 'none',
+        'middle' => 'none',
+        'title' => 'none',
+      ),
+      'title_field' => 'select',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'name',
+      'settings' => array(),
+      'type' => 'name_widget',
+      'weight' => 0,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Address');
   t('Bemerkungen');
+  t('Company');
+  t('Connection');
   t('Date');
   t('Datum');
+  t('E-Mail');
   t('Email type');
   t('Erledigt');
   t('Expose File Field');
+  t('Household');
   t('Individual Type');
   t('Inquiry');
+  t('Inquiry for');
   t('Job title');
   t('Languages');
   t('Meeting Type');
+  t('Name');
   t('Notes');
+  t('Organization');
   t('Other');
   t('Participants');
+  t('Phone');
   t('Profile Picture');
   t('Recipient');
+  t('Responsible agent');
+  t('Secondary agent');
+  t('Status');
   t('Task type');
   t('Teilnehmer');
   t('birthday');
