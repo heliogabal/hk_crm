@@ -2052,7 +2052,7 @@ function hk_crm_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_text',
-      'weight' => 11,
+      'weight' => 10,
     ),
   );
 
@@ -2097,7 +2097,7 @@ function hk_crm_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 10,
+      'weight' => 13,
     ),
   );
 
@@ -2155,7 +2155,7 @@ function hk_crm_field_default_field_instances() {
         ),
       ),
       'type' => 'addressfield_standard',
-      'weight' => 3,
+      'weight' => 7,
     ),
   );
 
@@ -2202,7 +2202,7 @@ function hk_crm_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 6,
+      'weight' => 16,
     ),
   );
 
@@ -2221,7 +2221,7 @@ function hk_crm_field_default_field_instances() {
         'weight' => 1,
       ),
       'live_results_search' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'email',
         'settings' => array(),
         'type' => 'email_plain',
@@ -2244,7 +2244,7 @@ function hk_crm_field_default_field_instances() {
         'size' => 36,
       ),
       'type' => 'email_textfield',
-      'weight' => 1,
+      'weight' => 4,
     ),
   );
 
@@ -2297,7 +2297,7 @@ function hk_crm_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 13,
+      'weight' => 14,
     ),
   );
 
@@ -2358,7 +2358,7 @@ function hk_crm_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 14,
+      'weight' => 15,
     ),
   );
 
@@ -2442,7 +2442,7 @@ function hk_crm_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 9,
+      'weight' => 8,
     ),
   );
 
@@ -2487,7 +2487,7 @@ function hk_crm_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 12,
+      'weight' => 9,
     ),
   );
 
@@ -2532,7 +2532,7 @@ function hk_crm_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 8,
+      'weight' => 6,
     ),
   );
 
@@ -2551,7 +2551,7 @@ function hk_crm_field_default_field_instances() {
         'weight' => 2,
       ),
       'live_results_search' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone',
@@ -2577,7 +2577,7 @@ function hk_crm_field_default_field_instances() {
       'module' => 'phone',
       'settings' => array(),
       'type' => 'phone_textfield',
-      'weight' => 2,
+      'weight' => 5,
     ),
   );
 
@@ -2660,7 +2660,7 @@ function hk_crm_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 7,
+      'weight' => 12,
     ),
   );
 
@@ -2870,6 +2870,92 @@ function hk_crm_field_default_field_instances() {
       'settings' => array(),
       'type' => 'name_widget',
       'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-individual_type-name_field'.
+  $field_instances['taxonomy_term-individual_type-name_field'] = array(
+    'bundle' => 'individual_type',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'name_field',
+    'label' => 'Name',
+    'required' => TRUE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'hide_label' => array(
+        'entity' => FALSE,
+        'page' => FALSE,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -5,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-meeting_type-name_field'.
+  $field_instances['taxonomy_term-meeting_type-name_field'] = array(
+    'bundle' => 'meeting_type',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'name_field',
+    'label' => 'Name',
+    'required' => TRUE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'hide_label' => array(
+        'entity' => FALSE,
+        'page' => FALSE,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -5,
     ),
   );
 

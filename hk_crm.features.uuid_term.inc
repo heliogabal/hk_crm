@@ -37,22 +37,46 @@ function hk_crm_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
-    'name' => 'Prospective buyer',
+    'name' => 'Kaufinteressent',
     'description' => '',
     'format' => 'full_html',
     'weight' => 0,
     'uuid' => '066dd50b-eef1-4595-8e2a-921c4ed82b09',
     'vocabulary_machine_name' => 'individual_type',
+    'name_field' => array(
+      'de' => array(
+        0 => array(
+          'value' => 'Kaufinteressent',
+          'format' => NULL,
+        ),
+      ),
+      'en' => array(
+        0 => array(
+          'value' => 'Prospective buyer',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
+        'de' => array(
+          'entity_type' => 'taxonomy_term',
+          'language' => 'de',
+          'source' => 'en',
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1468454456,
+          'entity_uuid' => '066dd50b-eef1-4595-8e2a-921c4ed82b09',
+          'user_uuid' => '4a55d8c1-68a4-4176-ba22-e1a4256d00ed',
+        ),
         'en' => array(
           'entity_type' => 'taxonomy_term',
           'language' => 'en',
           'source' => '',
           'status' => 1,
           'translate' => 0,
-          'created' => 1467614207,
+          'created' => 1468454376,
           'entity_uuid' => '066dd50b-eef1-4595-8e2a-921c4ed82b09',
           'user_uuid' => '4a55d8c1-68a4-4176-ba22-e1a4256d00ed',
         ),
@@ -63,22 +87,46 @@ function hk_crm_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
-    'name' => 'Business partner',
+    'name' => 'Geschäftspartner',
     'description' => '',
     'format' => 'full_html',
     'weight' => 2,
     'uuid' => '094ac88a-d41e-4149-8fcf-42e49ee3ebd5',
     'vocabulary_machine_name' => 'individual_type',
+    'name_field' => array(
+      'de' => array(
+        0 => array(
+          'value' => 'Geschäftspartner',
+          'format' => NULL,
+        ),
+      ),
+      'en' => array(
+        0 => array(
+          'value' => 'Business partner',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
+        'de' => array(
+          'entity_type' => 'taxonomy_term',
+          'language' => 'de',
+          'source' => 'en',
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1468454543,
+          'entity_uuid' => '094ac88a-d41e-4149-8fcf-42e49ee3ebd5',
+          'user_uuid' => '4a55d8c1-68a4-4176-ba22-e1a4256d00ed',
+        ),
         'en' => array(
           'entity_type' => 'taxonomy_term',
           'language' => 'en',
           'source' => '',
           'status' => 1,
           'translate' => 0,
-          'created' => 1466055771,
+          'created' => 1468454402,
           'entity_uuid' => '094ac88a-d41e-4149-8fcf-42e49ee3ebd5',
           'user_uuid' => '4a55d8c1-68a4-4176-ba22-e1a4256d00ed',
         ),
@@ -115,15 +163,39 @@ function hk_crm_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
-    'name' => 'Buyer Meeting',
+    'name' => 'Kaufinteressent Treffen',
     'description' => '',
     'format' => 'full_html',
     'weight' => 0,
     'uuid' => '182df500-2234-46c0-bbc3-35ad19a3f9e3',
     'vocabulary_machine_name' => 'meeting_type',
+    'name_field' => array(
+      'de' => array(
+        0 => array(
+          'value' => 'Kaufinteressent Treffen',
+          'format' => NULL,
+        ),
+      ),
+      'en' => array(
+        0 => array(
+          'value' => 'Buyer Meeting',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
+        'de' => array(
+          'entity_type' => 'taxonomy_term',
+          'language' => 'de',
+          'source' => 'en',
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1468454822,
+          'entity_uuid' => '182df500-2234-46c0-bbc3-35ad19a3f9e3',
+          'user_uuid' => '4a55d8c1-68a4-4176-ba22-e1a4256d00ed',
+        ),
         'en' => array(
           'entity_type' => 'taxonomy_term',
           'language' => 'en',
@@ -167,15 +239,39 @@ function hk_crm_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
-    'name' => 'Team Meeting',
+    'name' => 'Team Termin',
     'description' => '',
     'format' => 'full_html',
     'weight' => 0,
     'uuid' => '3fa8abf0-a501-4d9d-b570-8f506a193972',
     'vocabulary_machine_name' => 'meeting_type',
+    'name_field' => array(
+      'de' => array(
+        0 => array(
+          'value' => 'Team Termin',
+          'format' => NULL,
+        ),
+      ),
+      'en' => array(
+        0 => array(
+          'value' => 'Team Meeting',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
+        'de' => array(
+          'entity_type' => 'taxonomy_term',
+          'language' => 'de',
+          'source' => 'en',
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1468454972,
+          'entity_uuid' => '3fa8abf0-a501-4d9d-b570-8f506a193972',
+          'user_uuid' => '4a55d8c1-68a4-4176-ba22-e1a4256d00ed',
+        ),
         'en' => array(
           'entity_type' => 'taxonomy_term',
           'language' => 'en',
@@ -193,15 +289,39 @@ function hk_crm_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
-    'name' => 'Seller Meeting',
+    'name' => 'Besitzer Termin',
     'description' => '',
     'format' => 'full_html',
     'weight' => 0,
     'uuid' => '511954d9-6c0d-4ab1-adfd-fe1f47296361',
     'vocabulary_machine_name' => 'meeting_type',
+    'name_field' => array(
+      'de' => array(
+        0 => array(
+          'value' => 'Besitzer Termin',
+          'format' => NULL,
+        ),
+      ),
+      'en' => array(
+        0 => array(
+          'value' => 'Seller Meeting',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
+        'de' => array(
+          'entity_type' => 'taxonomy_term',
+          'language' => 'de',
+          'source' => 'en',
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1468454925,
+          'entity_uuid' => '511954d9-6c0d-4ab1-adfd-fe1f47296361',
+          'user_uuid' => '4a55d8c1-68a4-4176-ba22-e1a4256d00ed',
+        ),
         'en' => array(
           'entity_type' => 'taxonomy_term',
           'language' => 'en',
@@ -219,15 +339,39 @@ function hk_crm_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
-    'name' => 'Notary Meeting',
+    'name' => 'Notartermin',
     'description' => '',
     'format' => 'full_html',
     'weight' => 0,
     'uuid' => '5939a702-472f-4b28-8f2d-0a544e4e9816',
     'vocabulary_machine_name' => 'meeting_type',
+    'name_field' => array(
+      'de' => array(
+        0 => array(
+          'value' => 'Notartermin',
+          'format' => NULL,
+        ),
+      ),
+      'en' => array(
+        0 => array(
+          'value' => 'Notary Meeting',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
+        'de' => array(
+          'entity_type' => 'taxonomy_term',
+          'language' => 'de',
+          'source' => 'en',
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1468454870,
+          'entity_uuid' => '5939a702-472f-4b28-8f2d-0a544e4e9816',
+          'user_uuid' => '4a55d8c1-68a4-4176-ba22-e1a4256d00ed',
+        ),
         'en' => array(
           'entity_type' => 'taxonomy_term',
           'language' => 'en',
@@ -297,22 +441,46 @@ function hk_crm_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
-    'name' => 'Agent',
+    'name' => 'Makler',
     'description' => '',
     'format' => 'full_html',
     'weight' => 3,
     'uuid' => '89565d57-4e16-44c8-93f8-a1ec188864a4',
     'vocabulary_machine_name' => 'individual_type',
+    'name_field' => array(
+      'de' => array(
+        0 => array(
+          'value' => 'Makler',
+          'format' => NULL,
+        ),
+      ),
+      'en' => array(
+        0 => array(
+          'value' => 'Agent',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
+        'de' => array(
+          'entity_type' => 'taxonomy_term',
+          'language' => 'de',
+          'source' => 'en',
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1468454602,
+          'entity_uuid' => '89565d57-4e16-44c8-93f8-a1ec188864a4',
+          'user_uuid' => '4a55d8c1-68a4-4176-ba22-e1a4256d00ed',
+        ),
         'en' => array(
           'entity_type' => 'taxonomy_term',
           'language' => 'en',
           'source' => '',
           'status' => 1,
           'translate' => 0,
-          'created' => 1466055755,
+          'created' => 1468454414,
           'entity_uuid' => '89565d57-4e16-44c8-93f8-a1ec188864a4',
           'user_uuid' => '4a55d8c1-68a4-4176-ba22-e1a4256d00ed',
         ),
@@ -349,22 +517,46 @@ function hk_crm_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
-    'name' => 'Owner',
+    'name' => 'Besitzer',
     'description' => '',
     'format' => 'full_html',
     'weight' => 1,
     'uuid' => '960b677d-0691-410e-9ca9-4c1b59a137d5',
     'vocabulary_machine_name' => 'individual_type',
+    'name_field' => array(
+      'de' => array(
+        0 => array(
+          'value' => 'Besitzer',
+          'format' => NULL,
+        ),
+      ),
+      'en' => array(
+        0 => array(
+          'value' => 'Owner',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
+        'de' => array(
+          'entity_type' => 'taxonomy_term',
+          'language' => 'de',
+          'source' => 'en',
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1468454499,
+          'entity_uuid' => '960b677d-0691-410e-9ca9-4c1b59a137d5',
+          'user_uuid' => '4a55d8c1-68a4-4176-ba22-e1a4256d00ed',
+        ),
         'en' => array(
           'entity_type' => 'taxonomy_term',
           'language' => 'en',
           'source' => '',
           'status' => 1,
           'translate' => 0,
-          'created' => 1467614177,
+          'created' => 1468454389,
           'entity_uuid' => '960b677d-0691-410e-9ca9-4c1b59a137d5',
           'user_uuid' => '4a55d8c1-68a4-4176-ba22-e1a4256d00ed',
         ),

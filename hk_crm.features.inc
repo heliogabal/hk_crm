@@ -18,7 +18,7 @@ function hk_crm_default_crm_core_activity_type() {
   }');
   $items['email'] = entity_import('crm_core_activity_type', '{
     "type" : "email",
-    "label" : "Email",
+    "label" : "E-Mail",
     "weight" : 0,
     "activity_string" : "",
     "description" : ""
@@ -32,28 +32,28 @@ function hk_crm_default_crm_core_activity_type() {
   }');
   $items['meeting'] = entity_import('crm_core_activity_type', '{
     "type" : "meeting",
-    "label" : "Meeting",
+    "label" : "Termin",
     "weight" : 0,
     "activity_string" : "",
     "description" : "A meeting between 2 or more contacts"
   }');
   $items['notes'] = entity_import('crm_core_activity_type', '{
     "type" : "notes",
-    "label" : "Notes",
+    "label" : "Notiz",
     "weight" : 0,
     "activity_string" : "",
     "description" : ""
   }');
   $items['phone_call'] = entity_import('crm_core_activity_type', '{
     "type" : "phone_call",
-    "label" : "Phone call",
+    "label" : "Anruf",
     "weight" : 0,
     "activity_string" : "",
     "description" : "A phone call between 2 or more contacts"
   }');
   $items['task'] = entity_import('crm_core_activity_type', '{
     "type" : "task",
-    "label" : "Task",
+    "label" : "To-do",
     "weight" : 0,
     "activity_string" : "An agent created a task",
     "description" : "Agents can create tasks to fill their personal to-do list on the agent central view."
@@ -86,7 +86,7 @@ function hk_crm_default_crm_core_contact_type() {
       "address" : "field_crm_address",
       "phone" : "field_phone"
     },
-    "name" : "Individual",
+    "name" : "Kontakt",
     "description" : "Ein individueller Kontakt. Kann weiter als Kunde, Makler, Gesch\\u00e4ftspartner etc. klassifiziert werden.",
     "custom" : "0",
     "disabled" : "0",
